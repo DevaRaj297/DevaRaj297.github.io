@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Devaraj | Portfolio</title>
 
         <link rel="shortcut icon" href="./images/fav.ico" type="image/x-icon" />
 
@@ -12,8 +13,10 @@
         />
 
         <link rel="stylesheet" href="mystyles.css" />
-
-        <title>Devaraj | Portfolio</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            charset="utf-8"
+        ></script>
     </head>
     <body>
         <input type="checkbox" id="check" />
@@ -22,7 +25,7 @@
         <div id="top-navbar">
             <h2 class="ui top attached header">
                 <label for="check">
-                    <i class="small bars icon"></i>
+                    <i class="small bars icon nav_btn" id="nav-toggle"></i>
                 </label>
 
                 <img
@@ -30,29 +33,135 @@
                     src="./images/dev.jpg"
                     class="ui circular small right floated image"
                 />
-                <!-- <img
-                    src="./images/dev-logo.png"
-                    class="ui rounded image"
-                    style="float: left;"
-                    alt=""
-                /> -->
                 Devaraju
             </h2>
         </div>
         <!-- header end -->
 
+        <!-- mobile nav bar start -->
+        <div class="mobile_nav">
+            <div class="mobile_nav_items">
+                <div
+                    id="section_list"
+                    class="ui link animated selection inverted small list"
+                >
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#home"
+                                    ><i class="home icon"></i
+                                    ><span>Home</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#about"
+                                    ><i class="user circle icon"></i
+                                    ><span>About</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#projects"
+                                    ><i class="lightbulb icon"></i
+                                    ><span>Projects</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#skills"
+                                    ><i class="laptop icon"></i
+                                    ><span>Skills</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#academics"
+                                    ><i class="book icon"></i
+                                    ><span>Academics</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#achievements"
+                                    ><i class="graduation cap icon"></i
+                                    ><span>Achievements</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <div class="ui header">
+                                <a href="#contact"
+                                    ><i class="envelope icon"></i
+                                    ><span>Contact</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile nav bar end -->
+
         <!-- sidebar start -->
 
         <div class="sidebar">
-            <div
-                class="ui link middle aligned animated selection inverted small list"
-            >
+            <div class="profile_info">
                 <h2 class="ui center aligned header">
                     <img src="./images/dev.jpg" />
                 </h2>
+                <div class="media_icons">
+                    <div class="ui horizontal list">
+                        <div class="item">
+                            <a
+                                href="http://github.com/DevaRaj297"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="large github icon"></i
+                            ></a>
+                        </div>
+                        <div class="item">
+                            <a
+                                id="media-icon"
+                                href="https://www.linkedin.com/in/devarajutirumareddi/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="large linkedin icon"></i
+                            ></a>
+                        </div>
+                        <div class="item">
+                            <a
+                                id="media-icon"
+                                href="https://twitter.com/_dev_raj_/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="large twitter icon"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
 
-                <div id="media-icons">
+                <!-- <div id="media-icons">
                     <a
+                        style="background-color: antiquewhite;"
                         href="http://github.com/DevaRaj297"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -72,9 +181,15 @@
                         rel="noopener noreferrer"
                         ><i class="large twitter icon"></i
                     ></a>
-                </div>
+                </div> -->
+            </div>
 
-                <div class="ui inverted divider"></div>
+            <div class="ui inverted divider"></div>
+
+            <div
+                id="section_list"
+                class="ui link middle aligned animated selection inverted small list"
+            >
                 <div class="item">
                     <div class="middle aligned content">
                         <div class="ui header">
@@ -151,10 +266,10 @@
         <!-- sidebar end -->
 
         <!-- content start -->
-
-        <div id="home">
-            <!-- <center> -->
-            <!-- <div style="padding-top: 250px;">
+        <div class="category">
+            <div id="home">
+                <!-- <center> -->
+                <!-- <div style="padding-top: 250px;">
                 <div
                     class="ui align centered fuid segment"
                     style="
@@ -181,8 +296,8 @@
                     </h2>
                 </div>
             </div> -->
-            <!-- </center> -->
-            <!-- <div class="ui segment">
+                <!-- </center> -->
+                <!-- <div class="ui segment">
                 <img
                     class="ui centered large image"
                     src="./images/bg3.png"
@@ -193,24 +308,33 @@
                     a passionated programmer and Web Developer.
                 </h1>
             </div> -->
+            </div>
+            <div id="about">
+                <h2>About</h2>
+            </div>
+            <div id="projects">
+                <h2>Projects</h2>
+            </div>
+            <div id="skills">
+                <h2>Skills</h2>
+            </div>
+            <div id="academics">
+                <h2>Academics</h2>
+            </div>
+            <div id="achievements">
+                <h2>Achievements</h2>
+            </div>
+            <div id="contact">
+                <h2>Contact</h2>
+            </div>
         </div>
-        <div class="category" id="about">
-            <h2>About</h2>
-        </div>
-        <div class="category" id="projects">
-            <h2>Projects</h2>
-        </div>
-        <div class="category" id="skills">
-            <h2>Skills</h2>
-        </div>
-        <div class="category" id="academics">
-            <h2>Academics</h2>
-        </div>
-        <div class="category" id="achievements">
-            <h2>Achievements</h2>
-        </div>
-        <div class="category" id="contact">
-            <h2>Contact</h2>
-        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#nav-toggle").click(function () {
+                    $(".mobile_nav_items").toggleClass("active");
+                });
+            });
+        </script>
     </body>
 </html>
